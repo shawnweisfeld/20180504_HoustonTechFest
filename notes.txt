@@ -1,0 +1,26 @@
+Computer Vision Analyze
+ - shawn
+ - Robert Downey Jr
+ - Lincoln Memorial
+Computer Vision Thumbnail
+ - John
+Computer Vision OCR
+ - tweet
+Face Detect
+ - shawn
+ - Robert Downey Jr
+ - Robert Downey Jr 2
+Face Detect Verify
+ - Robert Downey Jr = Robert Downey Jr 2
+ - Robert Downey Jr = Shawn
+Translator Text Translate
+Translator Text Languages
+Text Analytics Key Phrase
+Text Analytics Sentiment
+Spell Check
+Bing Search
+Entity Search
+
+
+f991e501-c895-4cb9-b921-c61722c0830f
+8c06ad04-7c2f-4d63-97a3-523db1b95cad

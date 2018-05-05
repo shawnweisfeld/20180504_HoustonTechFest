@@ -1,8 +1,7 @@
 {
 	"info": {
+		"_postman_id": "e1ad894f-67fc-41fe-bb42-bf91760d26e4",
 		"name": "Cognitive Services",
-		"_postman_id": "41795bef-edf0-4dfe-b57e-52eca64cff09",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -38,22 +37,18 @@
 					"query": [
 						{
 							"key": "visualFeatures",
-							"value": "Categories,Tags,Description,Faces,ImageType,Color,Adult",
-							"equals": true
+							"value": "Categories,Tags,Description,Faces,ImageType,Color,Adult"
 						},
 						{
 							"key": "details",
-							"value": "Celebrities,Landmarks",
-							"equals": true
+							"value": "Celebrities,Landmarks"
 						},
 						{
 							"key": "language",
-							"value": "en",
-							"equals": true
+							"value": "en"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -86,8 +81,7 @@
 					"path": [
 						"describe"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -123,22 +117,18 @@
 					"query": [
 						{
 							"key": "width",
-							"value": "100",
-							"equals": true
+							"value": "100"
 						},
 						{
 							"key": "height",
-							"value": "100",
-							"equals": true
+							"value": "100"
 						},
 						{
 							"key": "smartCropping",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -174,12 +164,10 @@
 					"query": [
 						{
 							"key": "language",
-							"value": "en",
-							"equals": true
+							"value": "en"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -215,22 +203,18 @@
 					"query": [
 						{
 							"key": "returnFaceId",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						},
 						{
 							"key": "returnFaceLandmarks",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						},
 						{
 							"key": "returnFaceAttributes",
-							"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
-							"equals": true
+							"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -263,8 +247,7 @@
 					"path": [
 						"verify"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -274,16 +257,23 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Ocp-Apim-Subscription-Key",
 						"value": "{{TranslatorTextCS-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\"Text\":\"I love cognitive services!\"}\r\n]"
+				},
 				"url": {
-					"raw": "{{TranslatorTextCS-url}}/Translate?text=Hello Austin!&from=en&to=es",
+					"raw": "{{TranslatorTextCS-url}}/Translate?from=en&to=es&api-version=3.0",
 					"host": [
 						"{{TranslatorTextCS-url}}"
 					],
@@ -292,23 +282,19 @@
 					],
 					"query": [
 						{
-							"key": "text",
-							"value": "Hello Austin!",
-							"equals": true
-						},
-						{
 							"key": "from",
-							"value": "en",
-							"equals": true
+							"value": "en"
 						},
 						{
 							"key": "to",
-							"value": "es",
-							"equals": true
+							"value": "es"
+						},
+						{
+							"key": "api-version",
+							"value": "3.0"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -325,7 +311,10 @@
 						"value": "{{TranslatorTextCS-key}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{TranslatorTextCS-url}}/GetLanguagesForTranslate",
 					"host": [
@@ -334,8 +323,7 @@
 					"path": [
 						"GetLanguagesForTranslate"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -368,8 +356,7 @@
 					"path": [
 						"keyPhrases"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -402,8 +389,7 @@
 					"path": [
 						"sentiment"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -430,7 +416,6 @@
 						{
 							"key": "Text",
 							"value": "Wish your app could see, hear, speak, understand and interpret your user needs through natural methods of communication? Started researching Artificial Intelligence and Neural Networks, but it all just makes your head hurt? Wish there was an easy to consume web service by the leading researchers in the field that you could just call to teach your app/Web Site to see, hear, speak, understand and interpret your user needs through natural methods of communication? In this session we will kick the tires on the Cognitive Services available in Azure. Attendees will leave with an understanding of how to give their app superpowers",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -443,73 +428,14 @@
 					"query": [
 						{
 							"key": "mode",
-							"value": "proof",
-							"equals": true
+							"value": "proof"
 						},
 						{
 							"key": "mkt",
-							"value": "en-us",
-							"equals": true
+							"value": "en-us"
 						}
 					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Bing Search",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{BingCustomSearch-key}}"
-					}
-				],
-				"body": {},
-				"url": {
-					"raw": "{{BingCustomSearch-url}}?q=Azure&mkt=en-US&safesearch=Moderate&count=10&offset=0&customconfig={{BingCustomSearch-config}}",
-					"host": [
-						"{{BingCustomSearch-url}}"
-					],
-					"query": [
-						{
-							"key": "q",
-							"value": "Azure",
-							"equals": true
-						},
-						{
-							"key": "mkt",
-							"value": "en-US",
-							"equals": true
-						},
-						{
-							"key": "safesearch",
-							"value": "Moderate",
-							"equals": true
-						},
-						{
-							"key": "count",
-							"value": "10",
-							"equals": true
-						},
-						{
-							"key": "offset",
-							"value": "0",
-							"equals": true
-						},
-						{
-							"key": "customconfig",
-							"value": "{{BingCustomSearch-config}}",
-							"equals": true
-						}
-					]
-				},
-				"description": "https://www.customsearch.ai"
+				}
 			},
 			"response": []
 		},
@@ -526,7 +452,10 @@
 						"value": "{{BingEntitySearchCS-key}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{BingEntitySearchCS-url}}?q=Tony Stark&mkt=en-US&count=10&offset=0&safesearch=Moderate",
 					"host": [
@@ -535,32 +464,26 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "Tony Stark",
-							"equals": true
+							"value": "Tony Stark"
 						},
 						{
 							"key": "mkt",
-							"value": "en-US",
-							"equals": true
+							"value": "en-US"
 						},
 						{
 							"key": "count",
-							"value": "10",
-							"equals": true
+							"value": "10"
 						},
 						{
 							"key": "offset",
-							"value": "0",
-							"equals": true
+							"value": "0"
 						},
 						{
 							"key": "safesearch",
-							"value": "Moderate",
-							"equals": true
+							"value": "Moderate"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		}
